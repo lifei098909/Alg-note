@@ -1,0 +1,17 @@
+[
+{
+  "directory": "E:/7_proj/test/build",
+  "command": "D:\\software\\mingwin64\\bin\\gcc.exe  @CMakeFiles/leetcode.dir/includes_C.rsp -g -o CMakeFiles\\leetcode.dir\\main.c.obj -c E:\\7_proj\\test\\main.c",
+  "file": "E:/7_proj/test/main.c"
+},
+{
+  "directory": "E:/7_proj/test/build",
+  "command": "D:\\software\\mingwin64\\bin\\gcc.exe  @CMakeFiles/leetcode.dir/includes_C.rsp -g -o CMakeFiles\\leetcode.dir\\list.c.obj -c E:\\7_proj\\test\\list.c",
+  "file": "E:/7_proj/test/list.c"
+},
+{
+  "directory": "E:/7_proj/test/build",
+  "command": "D:\\software\\mingwin64\\bin\\gcc.exe  @CMakeFiles/leetcode.dir/includes_C.rsp -g -o CMakeFiles\\leetcode.dir\\search_sort\\binary_search.c.obj -c E:\\7_proj\\test\\search_sort\\binary_search.c",
+  "file": "E:/7_proj/test/search_sort/binary_search.c"
+}
+]
