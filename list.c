@@ -124,7 +124,7 @@ struct ListNode* reverseKGroup(struct ListNode* head, int k){
  */
 bool isPalindrome(struct ListNode* head){
     struct ListNode *left = head;
-    struct ListNode *right = reverse(head);
+    struct ListNode *right = reverseList(head);
 
     while (left ) {
         // printf("right->value = %d\n", right->val);

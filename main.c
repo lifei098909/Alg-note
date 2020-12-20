@@ -9,6 +9,8 @@ int main(void)
 {
     test_twoSum();
     test_reverseList();
+    test_climbStairs();
+    test_fib();
     return 0;
 }
 
