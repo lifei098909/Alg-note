@@ -8,10 +8,6 @@
 
 #define ARRAY_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))
 
-/*
- * leetcode 1.两数之和
- * Note: The returned array must be malloced, assume caller calls free().
- */
 /* leetcode 1 start */
 /*
  * leetcode 1.两数之和
