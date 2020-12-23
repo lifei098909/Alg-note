@@ -5,8 +5,7 @@
 #include <stdbool.h>
 #include <stdlib.h>
 #include "array.h"
-
-#define ARRAY_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))
+#include "common.h"
 
 /* leetcode 1 start */
 /*

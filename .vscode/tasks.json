@@ -6,6 +6,7 @@
         "${workspaceFolder}\\main.c",
         "${workspaceFolder}\\list.c",
         "${workspaceFolder}\\array.c",
+        "${workspaceFolder}\\common.c",
         "${workspaceFolder}\\dynamic_programming.c",
         "-o",
         "${fileBasenameNoExtension}.exe"],    // 编译命令参数

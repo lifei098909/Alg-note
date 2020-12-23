@@ -2,10 +2,7 @@
 #include <stdbool.h>
 #include <stdlib.h>
 #include "dynamic_programming.h"
-
-#define ARRAY_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))
-#define max(a, b) (a > b ? a : b)
-#define min(a, b) (a < b ? a : b)
+#include "common.h"
 
 /* leetcode 70 start */
 /*
