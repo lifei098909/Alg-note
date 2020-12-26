@@ -201,3 +201,79 @@ static struct ListNode* getKthFromEnd(struct ListNode* head, int k)
     return slow;
 }
 /* 剑指 Offer 22 start */
+
+/*
+ * leetcode 141 start
+ * 环形链表
+ * 给定一个链表，判断链表中是否有环。
+ * 如果链表中存在环，则返回 true 。 否则，返回 false 。
+ */
+bool hasCycle(struct ListNode *head)
+{
+    struct ListNode *slow = head;
+    struct ListNode *fast = head;
+
+    while (fast != NULL && fast->next != NULL) {
+        fast = fast->next->next;
+        slow = slow->next;
+
+        if (fast == slow)
+            return true;
+    }
+    return false;
+}
+/* leetcode 141 end */
+
+/*
+ * leetcode 142 start
+ * 环形链表 II
+ * 给定一个链表，返回链表开始入环的第一个节点。 如果链表无环，则返回 null
+ */
+struct ListNode *detectCycle(struct ListNode *head)
+{
+    struct ListNode *fast = head;
+    struct ListNode *slow = head;
+    struct ListNode *tmp = NULL;
+
+    while (fast != NULL && fast->next != NULL) {
+        fast = fast->next->next;
+        slow = slow->next;
+
+        if (slow == fast) {
+            tmp = slow;
+            break;
+        } 
+    }
+    if (tmp == NULL)
+        return NULL;
+
+    slow = head;
+    while (fast != slow) {
+        slow = slow->next;
+        fast = fast->next;
+    }
+    return slow;
+}
+/* leetcode 142 end */
+
+//相交链表 Leetcode 160
+/*
+ * leetcode 160 start
+ * 相交链表
+ * 编写一个程序，找到两个单链表相交的起始节点。
+ */
+struct ListNode *getIntersectionNode(struct ListNode *headA, struct ListNode *headB) { 
+    if (headA == NULL || headB == NULL)
+        return NULL;
+
+    struct ListNode *pA = headA;
+    struct ListNode *pB = headB;
+
+    while (pA != pB) {
+        pA = ((pA == NULL) ? headB : pA->next);
+        pB = ((pB == NULL) ? headA : pB->next);
+    }
+    return pA;
+}
+/* leetcode 160 end */
+
