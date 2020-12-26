@@ -15,7 +15,8 @@ struct ListNode {
  * 输入: 1->2->3->4->5->NULL
  * 输出: 5->4->3->2->1->NULL
  */
-struct ListNode* reverseList(struct ListNode* head){
+static struct ListNode* reverseList(struct ListNode* head)
+{
     struct ListNode *new_head = NULL;
     struct ListNode *next = NULL;
     while (head) {
@@ -27,7 +28,7 @@ struct ListNode* reverseList(struct ListNode* head){
     return new_head;
 }
 /* 递归 */
-struct ListNode* reverseList_a(struct ListNode* head)
+static struct ListNode* reverseList_a(struct ListNode* head)
 {
    if (!head || !head->next)
         return head;
@@ -49,7 +50,7 @@ struct ListNode* reverseList_a(struct ListNode* head)
  * 输出: 1->4->3->2->5->NULL
  */
 struct ListNode *rear = NULL;
-struct ListNode *reverseN(struct ListNode* head, int n)
+static struct ListNode *reverseN(struct ListNode* head, int n)
 {
     if (n == 1) {
         rear = head->next;
@@ -61,7 +62,8 @@ struct ListNode *reverseN(struct ListNode* head, int n)
     return last;
 }
 
-struct ListNode* reverseBetween(struct ListNode* head, int m, int n){
+static struct ListNode* reverseBetween(struct ListNode* head, int m, int n)
+{
     if (m == 1)
         return reverseN(head, n);
     head->next = reverseBetween(head->next, m - 1, n - 1);
@@ -81,7 +83,7 @@ struct ListNode* reverseBetween(struct ListNode* head, int m, int n){
  * 当 k = 2 时，应当返回: 2->1->4->3->5
  * 当 k = 3 时，应当返回: 3->2->1->4->5
  */
-struct ListNode* reverseList_ab(struct ListNode* a, struct ListNode *b)
+static struct ListNode* reverseList_ab(struct ListNode* a, struct ListNode *b)
 {
     struct ListNode* pre = NULL;
     struct ListNode* cur = a;
@@ -96,7 +98,8 @@ struct ListNode* reverseList_ab(struct ListNode* a, struct ListNode *b)
     return pre;
 }
 
-struct ListNode* reverseKGroup(struct ListNode* head, int k){
+static struct ListNode* reverseKGroup(struct ListNode* head, int k)
+{
     if (head == NULL)
         return head;
     struct ListNode* a = head;
@@ -122,7 +125,8 @@ struct ListNode* reverseKGroup(struct ListNode* head, int k){
  * 输入: 1->2->2->1
  * 输出: true
  */
-bool isPalindrome(struct ListNode* head){
+static bool isPalindrome(struct ListNode* head)
+{
     struct ListNode *left = head;
     struct ListNode *right = reverseList(head);
 
@@ -182,7 +186,8 @@ void test_reverseList(void)
  * 给定一个链表: 1->2->3->4->5, 和 k = 2.
  * 返回链表 4->5.
  */
-struct ListNode* getKthFromEnd(struct ListNode* head, int k){
+static struct ListNode* getKthFromEnd(struct ListNode* head, int k)
+{
     struct ListNode *fast = head;
     struct ListNode *slow = head;
 

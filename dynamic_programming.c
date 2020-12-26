@@ -11,7 +11,7 @@
  * 每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？
  */
 
-int climbStairs(int n)
+static int climbStairs(int n)
 {
    int dp[n];
 
@@ -49,7 +49,7 @@ void test_climbStairs(void)
  * F(N) = F(N - 1) + F(N - 2), 其中 N > 1.
  */
 
-int fib(int N) {
+static int fib(int N) {
     int dp[N + 1];
     if (N < 2)
         return N; 
@@ -60,7 +60,7 @@ int fib(int N) {
     return dp[N];
 }
 
-int fib_a(int N) {
+static int fib_a(int N) {
     if (N < 2)
         return N;
     return fib_a(N - 1) + fib_a(N - 2);
