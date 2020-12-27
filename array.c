@@ -82,3 +82,21 @@ int removeElement(int* nums, int numsSize, int val)
 }
 /* leetcode 27 end */
 
+/* leetcode 26 start
+ * 移除元素
+ * 给定一个排序数组，你需要在 原地 删除重复出现的元素，
+ * 使得每个元素只出现一次，返回移除后数组的新长度。
+ */
+int removeDuplicates(int* nums, int numsSize){
+    if (nums == NULL || numsSize == 0)
+        return 0;
+    int cnt = 0;
+
+    for (int i = 0; i < numsSize; i++) {
+        if (nums[cnt] != nums[i])
+            nums[++cnt] = nums[i];
+    }
+    return cnt + 1;
+}
+/* leetcode 26 end */
+
