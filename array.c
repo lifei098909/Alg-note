@@ -100,3 +100,23 @@ int removeDuplicates(int* nums, int numsSize){
 }
 /* leetcode 26 end */
 
+/* leetcode 80 start
+ * 删除排序数组中的重复项 II
+ * 给定一个增序排列数组 nums ，你需要在 原地 删除重复出现的元素，
+ * 使得每个元素最多出现两次，返回移除后数组的新长度。
+ * 不要使用额外的数组空间，你必须在 原地 修改输入数组 
+ * 并在使用 O(1) 额外空间的条件下完成。
+ */
+int removeDuplicates_twonums(int* nums, int numsSize)
+{
+    if (numsSize <= 2)
+        return numsSize;
+    int index = 2;
+
+    for (int i = 2; i < numsSize; i++) {
+        if (nums[i] != nums[index - 2])
+            nums[index++] = nums[i];
+    }
+    return index;
+}
+/* leetcode 80 end */
