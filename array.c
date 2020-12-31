@@ -120,3 +120,71 @@ int removeDuplicates_twonums(int* nums, int numsSize)
     return index;
 }
 /* leetcode 80 end */
+
+/* leetcode 75 start
+ * 颜色分类
+ * 给定一个包含红色、白色和蓝色，一共 n 个元素的数组，原地对它们进行排序，
+ * 使得相同颜色的元素相邻，并按照红色、白色、蓝色顺序排列。
+ * 此题中，我们使用整数 0、 1 和 2 分别表示红色、白色和蓝色。
+ */
+void sortColors(int* nums, int numsSize){
+    int zero = -1;
+    int two = numsSize;
+    int t;
+    int i = 0;
+
+    while (i < two) {
+        if (nums[i] == 1) {
+            i++;
+        }
+        else if (nums[i] == 2) {
+            two--;
+            t = nums[i];
+            nums[i] = nums[two];
+            nums[two] = t;
+        }
+        else {
+            zero++;
+            t = nums[i];
+            nums[i] = nums[zero];
+            nums[zero] = t;
+            i++;
+        }
+    }
+}
+/* leetcode 75 end */
+
+/* leetcode 215 start
+ * 215. 数组中的第K个最大元素
+ * 在未排序的数组中找到第 k 个最大的元素。
+ * 请注意，你需要找的是数组排序后的第 k 个最大的元素，而不是第 k 个不同的元素。
+ */
+int quicksort(int *nums, int low, int high, int k)
+{
+    int temp = nums[low];
+    int l = low;
+    int h = high;
+
+    while (low < high) {
+        while (low < high && nums[high] >= temp) {
+            high--;
+        }
+        nums[low] = nums[high];
+        while (low < high && nums[low] <= temp) {
+            low++;
+        }
+        nums[high] = nums[low];
+    }
+    nums[low] = temp;
+    if (low == k)
+        return nums[low];
+    else if (low > k)
+        return quicksort(nums, l, low - 1, k);
+    else
+        return quicksort(nums, low + 1, h, k);
+}
+
+int findKthLargest(int* nums, int numsSize, int k){
+    return quicksort(nums, 0, numsSize - 1, numsSize - k);
+}
+/* leetcode 215 end */
