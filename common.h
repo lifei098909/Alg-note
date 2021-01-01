@@ -5,4 +5,5 @@
 
 int comp(const void *a, const void *b);
 int comb(const void *a, const void *b);
+int cmp_twodimension(const void *a, const void *b);
 #endif

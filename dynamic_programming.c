@@ -48,7 +48,6 @@ void test_climbStairs(void)
  * F(0) = 0,   F(1) = 1
  * F(N) = F(N - 1) + F(N - 2), 其中 N > 1.
  */
-
 static int fib(int N) {
     int dp[N + 1];
     if (N < 2)
@@ -79,3 +78,87 @@ void test_fib(void)
     }
 }
 /* leetcode 509 end */
+
+/* leetcode 300 start */
+/*
+ * leetcode 300.最长递增子序列
+ * 给你一个整数数组 nums ，找到其中最长严格递增子序列的长度。
+ */
+int lengthOfLIS(int* nums, int numsSize){
+    int dp[numsSize];
+    int res = 0;
+
+    for (int i = 0; i < numsSize; i++) 
+        dp[i] = 1;
+    for (int i = 0; i < numsSize; i++) {
+        for (int j = 0; j < i; j++) {
+            if (nums[i] > nums[j])
+                dp[i] = fmax(dp[i], dp[j] + 1);
+        }
+    }
+   
+    for (int i = 0; i < numsSize; i++)
+        res = fmax(res, dp[i]);
+    return res;
+}
+
+void rest_lengthOfLIS(void)
+{
+    int res;
+    int LIS_data[] = {10, 9, 2, 5, 7, 101, 18};
+    
+    res = lengthOfLIS(LIS_data, ARRAY_SIZE(LIS_data));
+
+    printf("the length of LIS is %d\n", res);
+}
+/* leetcode 300 end */
+
+/* leetcode 354 start */
+/*
+ * leetcode 354.俄罗斯套娃信封问题
+ * 给定一些标记了宽度和高度的信封，宽度和高度以整数对形式 (w, h) 出现。
+ * 当另一个信封的宽度和高度都比这个信封大的时候，这个信封就可以放进另一个信封里，如同俄罗斯套娃一样。
+ * 请计算最多能有多少个信封能组成一组“俄罗斯套娃”信封（即可以把一个信封放到另一个信封里面）。
+ */
+int maxEnvelopes(int** envelopes, int envelopesSize, int* envelopesColSize){
+    if (envelopesSize == 0)
+        return 0;
+    
+    qsort(envelopes, envelopesSize, sizeof(int*), cmp_twodimension);
+    int dp[envelopesSize];
+    int max = 0;
+
+    for (int i = 0; i < envelopesSize; i++) {
+        dp[i] = 1;
+        for (int j = 0; j < i; j++) {
+            if (envelopes[i][0] > envelopes[j][0] && 
+                envelopes[i][1] > envelopes[j][1])
+                dp[i] = fmax(dp[i], dp[j] + 1);
+        }
+        max = fmax(max, dp[i]);
+    }
+    return max;
+}
+/* leetcode 354 end */
+
+/* leetcode 53 start */
+/*
+ * leetcode 53.最大子序和
+ * 给定一个整数数组 nums ，找到一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。
+ */
+int maxSubArray(int* nums, int numsSize){
+    int dp[numsSize + 1];
+
+    if(numsSize == 0)
+        return 0;
+    dp[0] = nums[0];
+    int res = nums[0];
+
+    for (int i = 1; i < numsSize; i++) {
+        dp[i] = fmax(nums[i], nums[i] + dp[i - 1]);
+        res = fmax(res, dp[i]);
+    }
+
+    return res;
+}
+/* leetcode 53 end */
