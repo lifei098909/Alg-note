@@ -6,4 +6,6 @@
 int comp(const void *a, const void *b);
 int comb(const void *a, const void *b);
 int cmp_twodimension(const void *a, const void *b);
+int min_three(int a, int b, int c);
+int max_three(int a, int b, int c);
 #endif

@@ -162,3 +162,31 @@ int maxSubArray(int* nums, int numsSize){
     return res;
 }
 /* leetcode 53 end */
+
+/* leetcode 72 start */
+/*
+ * leetcode 72.编辑距离
+ * 给定一个整数数组 nums ，找到一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。
+ */
+int minDistance(char * word1, char * word2){
+    int len1 = strlen(word1);
+    int len2 = strlen(word2);
+
+    int dp[len1 + 1][len2 + 1];
+
+    for (int i = 0; i <= len1; i++)
+        dp[i][0] = i;
+    for (int j = 0; j <= len2; j++)
+        dp[0][j] = j;
+    
+    for (int i = 1; i <= len1; i++) {
+        for (int j = 1; j <= len2; j++) {
+            if (word1[i - 1] == word2[j - 1])
+                dp[i][j] = dp[i - 1][j - 1];
+            else
+                dp[i][j] = 1 + min_three(dp[i][j - 1], dp[i - 1][j - 1], dp[i - 1][j]);
+        }
+    }
+    return dp[len1][len2];
+}
+/* leetcode 72 end */

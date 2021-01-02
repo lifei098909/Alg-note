@@ -22,3 +22,13 @@ int cmp_twodimension(const void *a, const void *b)
         return a1[0] - b1[0];
     }
 }
+
+int min_three(int a, int b, int c)
+{
+    return fmin(a, fmin(b, c));
+}
+
+int max_three(int a, int b, int c)
+{
+    return fmax(a, fmax(b, c));
+}
