@@ -32,3 +32,26 @@ int max_three(int a, int b, int c)
 {
     return fmax(a, fmax(b, c));
 }
+
+/*
+ * 二维数组第一列升序排序
+*/
+int comp_column_one(const void *a, const void *b)
+{
+    int *a1 = *(int **)a;
+    int *b1 = *(int **)b;
+    
+    return a1[0] - b1[0]; 
+}
+
+/*
+ * 二维数组第二列升序排序
+*/
+int comp_column_two(const void *a, const void *b)
+{
+    int *a1 = *(int **)a;
+    int *b1 = *(int **)b;
+    
+    return a1[1] - b1[1]; 
+}
+
