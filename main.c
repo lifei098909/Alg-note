@@ -4,6 +4,7 @@
 
 #include "array.h"
 #include "list.h"
+#include "dynamic_programming.h"
 
 int main(void)
 {

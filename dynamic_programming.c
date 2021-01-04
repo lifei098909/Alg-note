@@ -190,3 +190,30 @@ int minDistance(char * word1, char * word2){
     return dp[len1][len2];
 }
 /* leetcode 72 end */
+
+/* leetcode 516 start */
+/*
+ * leetcode 516.最长回文子序列
+ * 给定一个字符串 s ，找到其中最长的回文子序列，并返回该序列的长度。可以假设 s 的最大长度为 1000 
+ */
+int longestPalindromeSubseq(char * s)
+{
+    int len = strlen(s);
+    int dp[len];
+
+    for (int i = 0; i < len; i++)
+        dp[i] = 1;
+    for (int i = len - 2; i >= 0; i--) {
+        int pre = 0;
+        for (int j = i + 1; j < len; j++) {
+            int temp = dp[j];
+            if (s[i] == s[j])
+                dp[j] = pre + 2;
+            else
+                dp[j] = fmax(dp[j], dp[j - 1]);
+            pre = temp;
+        }
+    }
+    return dp[len - 1];
+}
+/* leetcode 516 start */
