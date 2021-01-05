@@ -162,3 +162,37 @@ void test_isMatch(void)
 }
 /*leetcode 10 end*/
 
+/* leetcode 830 start */
+/* leetcode 830. 较大分组的位置
+* 在一个由小写字母构成的字符串 s 中，包含由一些连续的相同字符所构成的分组。
+*/
+/**
+ * Return an array of arrays of size *returnSize.
+ * The sizes of the arrays are returned as *returnColumnSizes array.
+ * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().
+ */
+int** largeGroupPositions(char * s, int* returnSize, int** returnColumnSizes){
+    int len = strlen(s);
+    int start = 0;
+    int end = 0;
+    int cnt = 0;
+    int **res = (int **)malloc(sizeof(int*) * (len / 3 + 1));
+
+    *returnColumnSizes = (int *)malloc(sizeof(int) * (len / 3 + 1));
+    
+    for (end = 1; end <= len; end++) {
+        if (s[start] != s[end]) {
+            if (end - start >= 3) {
+                res[cnt] = (int*)malloc(sizeof(int) * 2);
+                res[cnt][0] = start;
+                res[cnt][1] = end - 1;
+                (*returnColumnSizes)[cnt++] = 2;
+            }
+            start = end;
+        }
+    }
+    *returnSize = cnt;
+
+    return res;
+}
+/*leetcode 830 end*/
