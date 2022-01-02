@@ -1,6 +1,9 @@
 {
     "version": "2.0.0",
+    "label": "gcc",
+    //"type": "shell",
     "command": "gcc",
+    //"command":"D:\\cygwin64\\bin\\gcc.exe",
     "args": [
         "-g",
         "${workspaceFolder}\\main.c",
