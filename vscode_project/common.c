@@ -1,4 +1,4 @@
-#include "common.h"
+#include "vscode_project/common.h"
 
 /* 从小到大排列 */
 int comp(const void *a, const void *b)

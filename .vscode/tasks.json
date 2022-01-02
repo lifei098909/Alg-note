@@ -1,17 +1,18 @@
 {
     "version": "2.0.0",
-    "label": "gcc",
+    //"label": "gcc",
     //"type": "shell",
     "command": "gcc",
     //"command":"D:\\cygwin64\\bin\\gcc.exe",
     "args": [
         "-g",
-        "${workspaceFolder}\\main.c",
-        "${workspaceFolder}\\list.c",
-        "${workspaceFolder}\\array.c",
-        "${workspaceFolder}\\common.c",
-        "${workspaceFolder}\\dynamic_programming.c",
-        "${workspaceFolder}\\string_type.c",
+        //"${file}",
+        "${workspaceFolder}\\vscode_project\\main.c",
+        "${workspaceFolder}\\vscode_project\\list.c",
+        "${workspaceFolder}\\vscode_project\\array.c",
+        "${workspaceFolder}\\vscode_project\\common.c",
+        "${workspaceFolder}\\vscode_project\\dynamic_programming.c",
+        "${workspaceFolder}\\vscode_project\\string_type.c",
         "-o",
         "${fileBasenameNoExtension}.exe"],    // 编译命令参数
     "problemMatcher": {

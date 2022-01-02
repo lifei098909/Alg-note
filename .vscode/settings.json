@@ -2,4 +2,9 @@
     "cmake.sourceDirectory": "${workspaceFolder}/vscode_project",
     "cmake.configureOnOpen": true,
     "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "files.associations": {
+        "array.h": "c",
+        "common.h": "c",
+        "dynamic_programming.h": "c"
+    },
 }

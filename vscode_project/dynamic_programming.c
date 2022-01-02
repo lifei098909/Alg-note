@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdlib.h>
-#include "dynamic_programming.h"
-#include "common.h"
+#include "vscode_project/dynamic_programming.h"
+#include "vscode_project/common.h"
 
 /* leetcode 70 start */
 /*

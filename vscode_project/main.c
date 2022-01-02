@@ -2,9 +2,9 @@
 #include <stdbool.h>
 #include <stdlib.h>
 
-#include "array.h"
-#include "list.h"
-#include "dynamic_programming.h"
+#include "vscode_project/array.h"
+#include "vscode_project/list.h"
+#include "vscode_project/dynamic_programming.h"
 
 int main(void)
 {
@@ -14,6 +14,3 @@ int main(void)
     test_fib();
     return 0;
 }
-
-
-
