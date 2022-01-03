@@ -1,22 +1,12 @@
 {
     "version": "2.0.0",
-    //"label": "gcc",
-    //"type": "shell",
     "command": "gcc",
-    //"command":"D:\\cygwin64\\bin\\gcc.exe",
     "args": [
         "-g",
-        //"${file}",
         "${workspaceFolder}/vscode_project/include/**",
         "${workspaceFolder}/vscode_project/src/**",
-        //"${workspaceFolder}\\vscode_project\\main.c",
-        //"${workspaceFolder}\\vscode_project\\list.c",
-        //"${workspaceFolder}\\vscode_project\\array.c",
-        //"${workspaceFolder}\\vscode_project\\common.c",
-        //"${workspaceFolder}\\vscode_project\\dynamic_programming.c",
-        //"${workspaceFolder}\\vscode_project\\string_type.c",
         "-o",
-        "vscode_project/${fileBasenameNoExtension}.exe"],    // 编译命令参数
+        "vscode_project/${fileBasenameNoExtension}.exe"],// 编译命令参数
     "problemMatcher": {
         "owner": "cpp",
         "fileLocation": ["relative", "${workspaceFolder}/vscode/**"],
