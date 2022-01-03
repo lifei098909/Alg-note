@@ -2,9 +2,9 @@
 #include <stdbool.h>
 #include <stdlib.h>
 
-#include "vscode_project/array.h"
-#include "vscode_project/list.h"
-#include "vscode_project/dynamic_programming.h"
+#include "../include/array.h"
+#include "../include/list.h"
+#include "../include/dynamic_programming.h"
 
 int main(void)
 {

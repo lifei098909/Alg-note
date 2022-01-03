@@ -4,8 +4,8 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdlib.h>
-#include "vscode_project/array.h"
-#include "vscode_project/common.h"
+#include "../include/array.h"
+#include "../include/common.h"
 
 /* leetcode 1 start */
 /*

@@ -2,7 +2,9 @@
 #include <stdbool.h>
 #include <stdlib.h>
 #include <string.h>
-#include "vscode_project/common.h"
+#include <math.h>
+#include <stdbool.h>
+#include "../include/common.h"
 
 /*leetcode 3 start*/
 /*
@@ -23,7 +25,7 @@ int lengthOfLongestSubstring(char * s){
                 p = j + 1;
             }
         }
-        cnt = max(cnt, i - p + 1);
+        cnt = fmax(cnt, i - p + 1);
     }
     return cnt;
 }
@@ -110,7 +112,8 @@ bool isMatch(char * s, char * p)
 {
     int lens = strlen(s);
     int lenp = strlen(p);
-    bool dp[lens + 1][lenp + 1];
+    //bool dp[lens + 1][lenp + 1];
+    bool dp[30][31];
     memset(dp, false, sizeof(bool) * (lens + 1) * (lenp + 1));
     dp[lens][lenp] = true;
 

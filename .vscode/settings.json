@@ -1,10 +1,12 @@
 {
-    "cmake.sourceDirectory": "${workspaceFolder}/vscode_project",
+    "cmake.sourceDirectory": "${workspaceFolder}/vscode_project/",
     "cmake.configureOnOpen": true,
     "terminal.integrated.defaultProfile.windows": "Command Prompt",
     "files.associations": {
-        "array.h": "c",
-        "common.h": "c",
-        "dynamic_programming.h": "c"
+        "vscode_project/include/array.h": "c",
+        "vscode_project/include/common.h": "c",
+        "vscode_project/include/dynamic_programming.h": "c",
+        "vscode_project/include/math.h": "c",
+        "vscode_project/include/list.h": "c"
     },
 }
