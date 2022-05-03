@@ -42,7 +42,7 @@ void test_twoSum(void)
     
     printf("test leetcode 1. twoSum, result is");
     for (int i = 0; i < returnSize; i++) {
-        printf(" %d", res[i]);
+        printf(" %d\n", res[i]);
     }
 
 }

@@ -1,0 +1,27 @@
+[
+{
+  "directory": "E:/0_github/self/Algorithms_and_data_structures/build",
+  "command": "D:/cygwin64/bin/cc    -o CMakeFiles/main.c.dir/src/list.c.obj -c E:/0_github/self/Algorithms_and_data_structures/vscode_project/src/list.c",
+  "file": "E:/0_github/self/Algorithms_and_data_structures/vscode_project/src/list.c"
+},
+{
+  "directory": "E:/0_github/self/Algorithms_and_data_structures/build",
+  "command": "D:/cygwin64/bin/cc    -o CMakeFiles/main.c.dir/src/array.c.obj -c E:/0_github/self/Algorithms_and_data_structures/vscode_project/src/array.c",
+  "file": "E:/0_github/self/Algorithms_and_data_structures/vscode_project/src/array.c"
+},
+{
+  "directory": "E:/0_github/self/Algorithms_and_data_structures/build",
+  "command": "D:/cygwin64/bin/cc    -o CMakeFiles/main.c.dir/src/dynamic_programming.c.obj -c E:/0_github/self/Algorithms_and_data_structures/vscode_project/src/dynamic_programming.c",
+  "file": "E:/0_github/self/Algorithms_and_data_structures/vscode_project/src/dynamic_programming.c"
+},
+{
+  "directory": "E:/0_github/self/Algorithms_and_data_structures/build",
+  "command": "D:/cygwin64/bin/cc    -o CMakeFiles/main.c.dir/src/common.c.obj -c E:/0_github/self/Algorithms_and_data_structures/vscode_project/src/common.c",
+  "file": "E:/0_github/self/Algorithms_and_data_structures/vscode_project/src/common.c"
+},
+{
+  "directory": "E:/0_github/self/Algorithms_and_data_structures/build",
+  "command": "D:/cygwin64/bin/cc    -o CMakeFiles/main.c.dir/src/string_type.c.obj -c E:/0_github/self/Algorithms_and_data_structures/vscode_project/src/string_type.c",
+  "file": "E:/0_github/self/Algorithms_and_data_structures/vscode_project/src/string_type.c"
+}
+]
