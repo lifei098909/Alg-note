@@ -15,5 +15,3 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
     docs/
         index.md  # The documentation homepage.
         ...       # Other markdown pages, images and other files.
-<h2 align="center"> 序 </h2>
-结合leetcode刷题记录，整理汇总 刷leetcode算法合集，包含可调试的vscode工程。
