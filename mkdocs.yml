@@ -1,1 +1,8 @@
-site_name: 算法和数据结构
+# Project information
+site_name: 算法笔记
+site_author: huihui
+site_description: 一本能运行的数据结构与算法个人笔记
+docs_dir: build
+# Repository
+repo_name: lifei098909/hello-algo
+repo_url: https://github.com/lifei098909/Alg-note
