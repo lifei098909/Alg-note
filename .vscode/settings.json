@@ -1,5 +1,5 @@
 {
-    "cmake.sourceDirectory": "${workspaceFolder}/vscode_project/",
+    "cmake.sourceDirectory": "E:/0_github/self/Algorithms_and_data_structures/code_project",
     "cmake.configureOnOpen": true,
     "terminal.integrated.defaultProfile.windows": "Command Prompt",
     "files.associations": {
