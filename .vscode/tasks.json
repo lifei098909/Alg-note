@@ -3,10 +3,10 @@
     "command": "gcc",
     "args": [
         "-g",
-        "${workspaceFolder}/vscode_project/include/**",
-        "${workspaceFolder}/vscode_project/src/**",
+        "${workspaceFolder}/code_project/include/**",
+        "${workspaceFolder}/code_project/src/**",
         "-o",
-        "vscode_project/${fileBasenameNoExtension}.exe"],// 编译命令参数
+        "code_project/${fileBasenameNoExtension}.exe"],// 编译命令参数
     "problemMatcher": {
         "owner": "cpp",
         "fileLocation": ["relative", "${workspaceFolder}/vscode/**"],

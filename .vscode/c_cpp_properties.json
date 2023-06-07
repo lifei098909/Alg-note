@@ -3,7 +3,7 @@
         {
             "name": "Win32",
             "includePath": [
-                "${workspaceFolder}/vscode_project/include/**"
+                "${workspaceFolder}/code_project/include/**"
             ],
             "defines": [
                 "_DEBUG",
