@@ -219,3 +219,10 @@ int longestPalindromeSubseq(char * s)
     return dp[len - 1];
 }
 /* leetcode 516 start */
+
+int main(void)
+{
+    test_climbStairs();
+    test_fib();
+    return 0;
+}

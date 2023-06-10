@@ -1,10 +1,11 @@
-cmake_minimum_required(VERSION 3.0.0)
+cmake_minimum_required(VERSION 3.1.0)
 project(leetcode VERSION 0.1.0)
 
+set(CMAKE_C_STANDARD 11)
 include(CTest)
 enable_testing()
 
-add_executable(main.c src/list.c src/array.c src/dynamic_programming.c src/common.c src/string_type.c)
+add_executable(src/list.c src/array.c src/dynamic_programming.c src/common.c src/string_type.c)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})

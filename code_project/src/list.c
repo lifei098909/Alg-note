@@ -277,3 +277,9 @@ struct ListNode *getIntersectionNode(struct ListNode *headA, struct ListNode *he
 }
 /* leetcode 160 end */
 
+
+int main(void)
+{
+    test_reverseList();
+    return 0;
+}

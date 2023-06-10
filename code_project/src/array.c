@@ -188,3 +188,10 @@ int findKthLargest(int* nums, int numsSize, int k){
     return quicksort(nums, 0, numsSize - 1, numsSize - k);
 }
 /* leetcode 215 end */
+
+int main(void)
+{
+    test_twoSum();
+    return 0;
+}
+
