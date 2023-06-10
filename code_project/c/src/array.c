@@ -10,10 +10,9 @@
 /* leetcode 1 start */
 /*
  * leetcode 1.两数之和
- * 反转一个单链表。
- * 示例:
- * 输入: 1->2->3->4->5->NULL
- * 输出: 5->4->3->2->1->NULL
+ * 输入：nums = [2,7,11,15], target = 9
+ * 输出：[0,1]
+ * 解释：因为 nums[0] + nums[1] == 9 ，返回 [0, 1] 。
  */
 static int* twoSum(int* nums, int numsSize, int target, int* returnSize)
 {
@@ -37,7 +36,7 @@ void test_twoSum(void)
     int nums[] = {2, 7, 11, 15};
     int target = 9;
     int returnSize = 0;
-    int *res;
+    int *res = NULL;
     res = twoSum(nums, ARRAY_SIZE(nums), 9, &returnSize);
     
     printf("test leetcode 1. twoSum, result is");
