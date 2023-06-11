@@ -4,8 +4,8 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdlib.h>
-#include "../include/array.h"
-#include "../include/common.h"
+#include "../../include/array.h"
+#include "../../include/common.h"
 
 /* leetcode 1 start */
 /*
@@ -21,7 +21,7 @@ static int* twoSum(int* nums, int numsSize, int target, int* returnSize)
     *returnSize = 2;
     for (int i = 0; i < numsSize - 1; i++) {
         for (int j = i + 1; j < numsSize; j++) {
-            if (data[i] + data[j] == target) {
+            if (nums[i] + nums[j] == target) {
                 data[0] = i;
                 data[1] = j;
                 return data;
