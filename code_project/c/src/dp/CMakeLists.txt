@@ -1,0 +1,1 @@
+add_executable(dynamic_programming dynamic_programming.c)

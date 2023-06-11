@@ -9,8 +9,9 @@ include_directories(./include)
 
 add_subdirectory(src/array)
 add_subdirectory(src/list)
+add_subdirectory(src/dp)
 
-add_executable(src/dynamic_programming.c src/common.c src/string_type.c)
+add_executable(src/string_type.c include/common.c)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})

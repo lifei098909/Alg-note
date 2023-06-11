@@ -3,8 +3,8 @@
 #include <stdlib.h>
 #include <math.h>
 #include <string.h>
-#include "../include/dynamic_programming.h"
-#include "../include/common.h"
+#include "../../include/dynamic_programming.h"
+#include "../../include/common.h"
 
 /* leetcode 70 start */
 /*
