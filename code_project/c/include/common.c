@@ -14,6 +14,7 @@ int comb(const void *a, const void *b)
     return *(int*)b - *(int*)a;
 }
 
+/*
 int cmp_twodimension(const void *a, const void *b)
 {
     int *a1 = *(int **)a;
@@ -23,7 +24,7 @@ int cmp_twodimension(const void *a, const void *b)
     } else {
         return a1[0] - b1[0];
     }
-}
+}*/
 
 int min_three(int a, int b, int c)
 {
