@@ -13,11 +13,13 @@
 
 void print_array(int arr[], int size)
 {
-    for (int i = 0; i < size; i++) {
-        printf("%d ", arr[i]);
+    for (int i = 0; i < size - 1; i++) {
+        printf("%d, ", arr[i]);
     }
+    printf("%d\n", arr[size - 1]);
 }
 
+/* 查找元素 */
 int find_element(int arr[], int size, int target)
 {
     if (arr == NULL || size < 0)
@@ -30,6 +32,7 @@ int find_element(int arr[], int size, int target)
     return -1;
 }
 
+/* 遍历数组 */
 void traverse_array(int *arr, int size)
 {
     if (arr == NULL || size < 0) {
@@ -42,6 +45,15 @@ void traverse_array(int *arr, int size)
         printf("arr[%d] = %d\n", i, arr[i]);
     }
     printf("the arr cnt: %d", cnt);
+}
+
+/* 在数组中index位置插入data*/
+int insert_element(int *arr, int size, int index, int data)
+{
+    for (int i = size - 1; i > index; i--) {
+        arr[i] = arr[i - 1];
+    }
+    arr[index] = data;
 }
 
 void array_test(void)
@@ -57,6 +69,11 @@ void array_test(void)
         printf("在数组nums中查找元素5 ，未找到该元素\n");
 
     traverse_array(nums, size);
+
+    /* 插入元素 */
+    insert_element(nums, size, 2, 101);
+    printf("在索引 2 处插入数字 101 ，得到 nums = ");
+    print_array(nums, size);
 }
 
 int main(void)
