@@ -20,6 +20,9 @@ void print_array(int arr[], int size)
 
 int find_element(int arr[], int size, int target)
 {
+    if (arr == NULL || size < 0)
+        return -1;
+
     for (int i = 0; i < size; i++) {
         if(arr[i] == target)
             return i;
@@ -27,22 +30,38 @@ int find_element(int arr[], int size, int target)
     return -1;
 }
 
+void traverse_array(int *arr, int size)
+{
+    if (arr == NULL || size < 0) {
+        printf("the arr is null");
+    }
+    
+    int cnt = 0;
+    for (int i = 0; i < size; i++) {
+        cnt++;
+        printf("arr[%d] = %d\n", i, arr[i]);
+    }
+    printf("the arr cnt: %d", cnt);
+}
+
 void array_test(void)
 {
-    int size = 6;
-    int nums[6] = {1, 2, 3, 4, 5, 6};
+    int nums[] = {1, 2, 3, 4, 5, 6};
     int index;
+    int size = ARRAY_SIZE(nums);
 
-    index = find(nums, size, 5);
+    index = find_element(nums, size, 5);
     if (index >= 0)
-        printf("在数组nums中查找元素5 ，索引为 %d\n", index);
+        printf("在数组nums中查找元素5 ，索引 index: %d\n", index);
     else
-        printf("在数组nums中查找元素5 ，未找到\n");
+        printf("在数组nums中查找元素5 ，未找到该元素\n");
 
+    traverse_array(nums, size);
 }
 
 int main(void)
 {
+    array_test();
 
-
+    return 0;
 }

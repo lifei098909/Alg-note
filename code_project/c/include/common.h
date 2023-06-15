@@ -7,6 +7,7 @@
 
 #ifndef __COMMON_H
 #define __COMMON_H
+#include <math.h>
 
 #define ARRAY_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))
 
