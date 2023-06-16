@@ -1,6 +1,6 @@
 /**
  * Copyright (C), 2021-2023, github.com/lifei098909.
- * File: dynamic_programming.c
+ * File: array.cpp
  * Created Time: 2023-06-10
  * Author: lifei (lifei1100508@163.com)
  */

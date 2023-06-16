@@ -8,6 +8,14 @@
 #ifndef __LIST_H
 #define __LIST_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 void test_reverseList(void);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

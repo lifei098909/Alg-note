@@ -8,8 +8,16 @@
 #ifndef __STRING_TYPE_H
 #define __STRING_TYPE_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 void test_lengthOfLongestSubstring(void);
 void test_longestPalindrome(void);
 void test_isMatch(void);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

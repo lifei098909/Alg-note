@@ -9,6 +9,10 @@
 #define __COMMON_H
 #include <math.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #define ARRAY_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))
 
 /* 从小到大排列 */
@@ -66,5 +70,8 @@ int comp_column_two(const void *a, const void *b)
     return a1[1] - b1[1]; 
 }
 
+#ifdef __cplusplus
+}
+#endif
 
 #endif

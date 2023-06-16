@@ -8,6 +8,14 @@
 #ifndef __ARRAY_H
 #define __ARRAY_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 void test_twoSum(void);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

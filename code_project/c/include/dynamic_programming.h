@@ -8,8 +8,15 @@
 #ifndef __DYNAMIC_PROGRAMMING_H
 #define __DYNAMIC_PROGRAMMING_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 void test_climbStairs(void);
 void test_fib(void);
 
+#ifdef __cplusplus
+}
+#endif
 
 #endif
