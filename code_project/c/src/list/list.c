@@ -8,11 +8,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdlib.h>
-
-struct ListNode {
-     int val;
-     struct ListNode *next;
-};
+#include "../../include/list.h"
 
 /* leetcode 206 start */
 /*
@@ -146,6 +142,7 @@ static bool isPalindrome(struct ListNode* head)
     }
     return true;
 }
+
 /* leetcode 234 end */
 void test_reverseList(void)
 {

@@ -8,9 +8,33 @@
 #ifndef __LIST_H
 #define __LIST_H
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
 #ifdef __cplusplus
 extern "C" {
 #endif
+
+struct ListNode {
+     int val;
+     struct ListNode *next;
+};
+
+/* Print a list */
+void print_list(ListNode *node)
+{
+    if (node == NULL) {
+        return;
+    }
+
+    while (node->next != NULL) {
+        printf("%d -> ", node->val);
+        node = node->next;
+    }
+
+    printf("%d\n", node->val);
+}
 
 void test_reverseList(void);
 
