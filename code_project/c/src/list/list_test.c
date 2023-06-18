@@ -39,6 +39,15 @@ static int find_target(ListNode *node, int target)
     return -1;
 }
 
+/* 链表中插入节点 */
+void insert_node(ListNode *head, ListNode *p)
+{
+    ListNode *n = head->next;
+    p->next = n;
+    head->next = p;
+}
+
+/* 遍历链表*/
 static void traverse_node(ListNode *node)
 {
     if (node == NULL)
@@ -75,7 +84,12 @@ void test_list(void)
     else
         printf("在数组nums中查找元素3 ，未找到该元素\n");
 
+    /* 遍历链表 */
     traverse_node(a);
+    /* 链表中插入节点 */
+    insert_node(a, new_listnode(100));
+    printf("insert node is\r\n");
+    print_list(a);
 }
 
 int main(void)
