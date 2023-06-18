@@ -22,6 +22,7 @@ ListNode *new_listnode(int val)
     return node;
 }
 
+/* 在链表中查找 target 节点 */
 static int find_target(ListNode *node, int target)
 {
     if (node == NULL)
@@ -36,6 +37,20 @@ static int find_target(ListNode *node, int target)
         i++;
     }
     return -1;
+}
+
+static void traverse_node(ListNode *node)
+{
+    if (node == NULL)
+        printf("the node is null");
+
+    int cnt = 0;
+    while (node) {
+        cnt++;
+        node = node->next;
+    }
+
+    printf("the node cnt: %d\n", cnt);;
 }
 
 void test_list(void)
@@ -59,6 +74,8 @@ void test_list(void)
         printf("在数组nums中查找元素3 ，索引 index: %d\n", index);
     else
         printf("在数组nums中查找元素3 ，未找到该元素\n");
+
+    traverse_node(a);
 }
 
 int main(void)
