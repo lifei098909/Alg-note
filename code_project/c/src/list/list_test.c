@@ -12,13 +12,30 @@
 
 typedef struct ListNode ListNode;
 
-/* 构造函数，初始化一个新节点 */
-ListNode *new_listnode(int val) {
+/* 初始化listnode */
+ListNode *new_listnode(int val) 
+{
     ListNode *node, *next;
     node = (ListNode *)malloc(sizeof(ListNode));
     node->val = val;
     node->next = NULL;
     return node;
+}
+
+static int find_target(ListNode *node, int target)
+{
+    if (node == NULL)
+        return -1;
+
+    int i = 0;
+    while (node) {
+        if (node->val == target) {
+            return i;
+        }
+        node = node->next;
+        i++;
+    }
+    return -1;
 }
 
 void test_list(void)
@@ -36,6 +53,12 @@ void test_list(void)
 
     printf("初始化的链表为\r\n");
     print_list(a);
+
+    int index = find_target(a, 3);
+    if (index >= 0)
+        printf("在数组nums中查找元素3 ，索引 index: %d\n", index);
+    else
+        printf("在数组nums中查找元素3 ，未找到该元素\n");
 }
 
 int main(void)
