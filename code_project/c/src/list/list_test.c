@@ -62,6 +62,18 @@ static void traverse_node(ListNode *node)
     printf("the node cnt: %d\n", cnt);;
 }
 
+/* 删除node后首个节点 */
+void delete_node(ListNode *node)
+{
+    if(!node->next)
+        return;
+    ListNode *tmp = node->next;
+    ListNode *node_next = tmp->next;
+    node->next = node_next;
+
+    free(tmp);
+}
+
 void test_list(void)
 {
     struct ListNode *a = new_listnode(1);
@@ -86,9 +98,15 @@ void test_list(void)
 
     /* 遍历链表 */
     traverse_node(a);
+
     /* 链表中插入节点 */
     insert_node(a, new_listnode(100));
     printf("insert node is\r\n");
+    print_list(a);
+
+    /* 删除链表节点 */
+    delete_node(b);
+    printf("删除节点 %d 后的链表为\r\n", b->val);
     print_list(a);
 }
 
