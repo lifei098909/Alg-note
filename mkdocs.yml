@@ -1,8 +1,114 @@
 # Project information
-site_name: 算法笔记
-site_author: huihui
-site_description: 结合leetcode刷题记录，整理汇总 刷leetcode算法合集，包含可运行、调试的vscode工程
+site_name: Alg note
+site_url: https://github.com/lifei098909
+site_author: lifei
+site_description: 一本动画图解、能运行、可提问的数据结构与算法入门书
 docs_dir: build
 # Repository
-repo_name: lifei098909/hello-algo
+repo_name: lifei098909/Alg-note
 repo_url: https://github.com/lifei098909/Alg-note
+edit_uri: https://github.com/lifei098909/Alg-note/tree/master/docs
+
+# Copyright
+copyright: Copyright &copy; 2023 lifei
+
+
+# Configuration
+theme:
+  name: 'material'
+  language: zh
+  features:
+    # - announce.dismiss
+    - content.action.edit
+    # - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    - content.tabs.link
+    - content.tooltips
+    # - header.autohide
+    # - navigation.expand
+    - navigation.indexes
+    # - navigation.instant
+    # - navigation.prune
+    - navigation.sections
+    # - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.top
+    - navigation.footer
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    # - toc.integrate
+  palette:
+    - scheme: default
+      primary: white
+      # accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - scheme: slate
+      # primary: grey
+      # accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+  font:
+    text: Noto Sans SC
+    code: Fira Code
+  favicon: assets/images/favicon.png
+  logo: assets/images/logo.png
+  icon:
+    logo: logo
+    repo: fontawesome/brands/github
+    edit: material/file-edit-outline
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/lifei098909
+    - icon: fontawesome/solid/code
+      link: https://leetcode.cn
+  generator: false
+
+# Plugins
+plugins:
+  - search
+
+# Extensions
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  # - pymdownx.magiclink:
+  #     repo_url_shorthand: true
+  #     user: squidfunk
+  #     repo: mkdocs-material
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+extra_css:
+  - stylesheets/extra.css
+
+# Page tree
+nav:
+  - 0. 写在前面:
+    - index.md
+  - 2. &nbsp; &nbsp; 数组:
+    - 2.1. &nbsp; 数组: /docs/array.md
+  - 3. &nbsp; &nbsp; 链表:
+    - 3.1. &nbsp; 链表: list.md
+  - 4. &nbsp; &nbsp; 哈希表:
+    - 4.1. &nbsp; 哈希表: 哈希表.md
+  - 5. &nbsp; &nbsp; 双指针:
+    - 5.1. &nbsp; 双指针: 双指针技巧总结.md
+  - 6. &nbsp; &nbsp; 二分查找:
+    - 6.1. &nbsp; 二分查找: 二分查找算法详解.md
