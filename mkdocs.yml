@@ -2,7 +2,7 @@
 site_name: Alg note
 site_url: https://github.com/lifei098909
 site_author: lifei
-site_description: 一本动画图解、能运行、可提问的数据结构与算法入门书
+site_description: 结合leetcode刷题记录，整理汇总 刷leetcode算法合集，包含可运行、调试的vscode工程
 docs_dir: build
 # Repository
 repo_name: lifei098909/Alg-note
